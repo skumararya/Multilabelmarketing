@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <>
       <footer>
-        <FooterSlider />
+        {/* <FooterSlider /> */}
        
         <FooterBottom />
       </footer>

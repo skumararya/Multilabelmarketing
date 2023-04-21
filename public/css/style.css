@@ -313,7 +313,7 @@ body {
   margin: 0;
   font-size: 14px;
 }
-a:hover {
+a, a:hover {
   color: transparent;
   text-decoration: none !important;
 }
@@ -1078,7 +1078,7 @@ a.nav-link.togg-btn {
 /* Footer Bottom Section css Start */
 .footer-bottom-sec {
   padding: 19px 0;
-  background: #06156c;
+  background: #000;
   color: #fff;
   text-align: center;
   font-size: 16px;
@@ -1533,3 +1533,8 @@ div.goog-te-gadget {
   padding: 15px;
   height: 100%;
 }
+
+/* login page */
+.login-sec{background: #3c4b64;}
+.login-sec form{background: #fff;
+  padding: 15px;}

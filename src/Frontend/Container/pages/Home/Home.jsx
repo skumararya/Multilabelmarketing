@@ -7,7 +7,8 @@ import WhatsNew from "./WhatsNew";
 const Home = () => {
   return (
     <>
-      <MainSlider />
+    <h2>Home page</h2>
+      {/* <MainSlider />
       <Welcome />
       <WhatsNew />
       <MapMediaSection />
@@ -34,7 +35,7 @@ const Home = () => {
             </p>{" "}
           </a>
         </div>
-      </div>
+      </div> */}
     </>
   );
 };

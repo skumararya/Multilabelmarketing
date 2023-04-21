@@ -24,14 +24,14 @@ const Menus = () => {
             <div className="col-12 col-sm-12 col-md-4 col-lg-4 logo-sec wow fadeInLeft">
               <Link className="logo-align" to="/">
                 <img src="images/logo.png" alt="emblem" />
-                <div className="brand-text">
+                {/* <div className="brand-text">
                   <h4>
                     DHARMA
                     <span>
                       Dam Health And Rehabilitation Monitoring Application
                     </span>
                   </h4>
-                </div>
+                </div> */}
               </Link>
             </div>
             <div className="col-12 col-sm-12 col-md-8 col-lg-8 loginbtn-sec wow fadeInRight">
@@ -50,11 +50,11 @@ const Menus = () => {
                     id="navbarSupportedContent"
                   >
                     <ul className="navbar-nav mr-auto">
-                      <li className="nav-item">
+                      {/* <li className="nav-item">
                         <NavLink to="/" className="">
                           Home
                         </NavLink>
-                      </li>
+                      </li> */}
                       {menus.data ? (
                         menus.data.map((menu, index) => (
                           <li className="nav-item" key={index}>
@@ -68,18 +68,17 @@ const Menus = () => {
                       )}
 
                       <li className="nav-item login-btn">
-                        <a
-                          target="_blank"
-                          href={`${process.env.REACT_APP_IMAGE_URL}`}
+                        <Link
+                          to={"/login"}
                           // href="http://164.52.202.110/dharma/"
                           className="blue-btn"
                           // data-toggle="modal"
                           // data-target="#exampleModal"
                         >
                           Login
-                        </a>
+                        </Link>
                       </li>
-                      <li className="nav-item search-icon">
+                      {/* <li className="nav-item search-icon">
                         <a
                           className="nav-link togg-btn"
                           type="button"
@@ -96,7 +95,7 @@ const Menus = () => {
                             />
                           </div>
                         )}
-                      </li>
+                      </li> */}
                     </ul>
                   </div>
                 </nav>

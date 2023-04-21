@@ -10,6 +10,7 @@ import UnderDevelopment from "./Container/pages/UnderDevelopment";
 import WhatsNewDetail from "./Container/pages/WhatsNewDetail";
 import MenuPage from "./Container/pages/MenuPage";
 import Contact from "./Container/pages/Contact";
+import Login from "./Container/pages/Login";
 const AppRouting = () => {
   return (
     <Routes>
@@ -37,6 +38,10 @@ const AppRouting = () => {
       <Route
         path="screen-reader-access"
         element={<ScreenReaderAccess />}
+      ></Route>
+      <Route
+        path="login"
+        element={<Login />}
       ></Route>
 
       {/* other detail pages */}

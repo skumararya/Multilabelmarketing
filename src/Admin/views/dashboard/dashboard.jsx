@@ -216,8 +216,8 @@ const dashboard = () => {
                         <strong>{item.activity}</strong>
                       </CTableDataCell>
                       <CTableDataCell className="text-center">
-                      <CDropdown>
-                          <CDropdownToggle   color="secondary"> <CIcon size="xl" icon={cilOptions} /></CDropdownToggle>
+                      <CDropdown >
+                          <CDropdownToggle caret={false}  color="secondary"> <CIcon size="xl" icon={cilOptions} /></CDropdownToggle>
   <CDropdownMenu style={{ transform: 'translate3d(-125px, -2px, 0px)' }}>
     <CDropdownItem href="#">Edit</CDropdownItem>
     <CDropdownItem href="#">Delete</CDropdownItem>

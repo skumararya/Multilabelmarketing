@@ -10,16 +10,16 @@ const InnerBanner = ({ title, action, action2 }) => {
               <div className="headingtitle">
                 <nav aria-label="breadcrumb">
                   <ol className="breadcrumb">
-                    <li className="breadcrumb-item">
+                    {/* <li className="breadcrumb-item">
                       <a href="#">Home</a>
-                    </li>
+                    </li> */}
                     <li className="breadcrumb-item active" aria-current="page">
                       {title}
                     </li>
                   </ol>
                 </nav>
-                {action()}
-                {action2}
+                {/* {action()}
+                {action2} */}
               </div>
             </div>
           </div>
