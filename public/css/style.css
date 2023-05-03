@@ -1538,3 +1538,8 @@ div.goog-te-gadget {
 .login-sec{background: #3c4b64;}
 .login-sec form{background: #fff;
   padding: 15px;}
+
+  .primary-heading{font-size: 18px;margin: 10px 0;}
+  .emp-form-wraper{background-color: #fff;
+    padding: 15px;}
+    .error{color: red;}

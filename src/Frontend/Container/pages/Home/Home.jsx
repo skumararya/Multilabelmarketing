@@ -1,17 +1,26 @@
-import React from "react";
+import React, { useEffect } from "react";
 import MainSlider from "./MainSlider";
 import MapMediaSection from "./MapMediaSection";
 import Welcome from "./Welcome";
 import WhatsNew from "./WhatsNew";
-
+import { fetchemployee } from "../../../../redux/slice/adminSlice/userSlice";
+import { useDispatch, useSelector } from "react-redux";
 const Home = () => {
+//   const dispatch = useDispatch();
+
+//   useEffect(() => {
+//     dispatch(fetchemployee(`ManageEmployee`)); 
+//   }, [dispatch]);
+
+//   const { employeelist, loading } = useSelector((state) => state.userSlice);
+// console.log(employeelist)
   return (
     <>
-    <h2>Home page</h2>
-      {/* <MainSlider />
+    <hr/>
+      {/* <MainSlider /> */}
       <Welcome />
-      <WhatsNew />
-      <MapMediaSection />
+      {/* <WhatsNew />
+      <MapMediaSection /> */}
 
       <div id="social-sidebar">
         <div className="social facebook">
@@ -35,7 +44,7 @@ const Home = () => {
             </p>{" "}
           </a>
         </div>
-      </div> */}
+      </div>
     </>
   );
 };

@@ -29,7 +29,7 @@ const Login = () => {
     Submit
   </CButton> */}
   <div className='my-5 text-center'>
-  <Link className='blue-btn' to={"/admin/dashboard"}>Login</Link>
+  <Link className='blue-btn' to={"/admin/employee"}>Login</Link>
   </div>
 </CForm>
 </div>

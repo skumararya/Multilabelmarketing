@@ -9,10 +9,10 @@ const Menus = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchMenus("get-menu-list"));
+   // dispatch(fetchMenus("get-menu-list"));
   }, [dispatch]);
 
-  const { menus, loading } = useSelector((state) => state.sliceHome);
+  //const { menus, loading } = useSelector((state) => state.sliceHome);
   // if (loading) {
   //   return <Spinner />;
   // }
@@ -50,12 +50,12 @@ const Menus = () => {
                     id="navbarSupportedContent"
                   >
                     <ul className="navbar-nav mr-auto">
-                      {/* <li className="nav-item">
+                      <li className="nav-item">
                         <NavLink to="/" className="">
                           Home
                         </NavLink>
-                      </li> */}
-                      {menus.data ? (
+                      </li>
+                      {/* {menus.data ? (
                         menus.data.map((menu, index) => (
                           <li className="nav-item" key={index}>
                             <NavLink to={menu.slug} className="">
@@ -65,7 +65,7 @@ const Menus = () => {
                         ))
                       ) : (
                         <div>No Data Found</div>
-                      )}
+                      )} */}
 
                       <li className="nav-item login-btn">
                         <Link

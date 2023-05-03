@@ -1,4 +1,4 @@
-import { axiosBaseURL } from "../../../apis/dharmaApi";
+import { axiosBaseURL } from "../../../apis/baseApi";
 
 // fetch banners
 const fetchBanners = async (url) => {

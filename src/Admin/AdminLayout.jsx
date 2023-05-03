@@ -1,10 +1,15 @@
 import React from "react";
-import {
-  AppContent,
-  AppSidebar,
-  AppFooter,
-  AppHeader,
-} from "./components/index";
+import AppSidebar from "./components/AppSidebar";
+import AppHeader from"./components/AppHeader";
+import AppFooter from "./components/AppFooter";
+import AppContent from "./components/AppContent";
+import AdminRouting from "./AdminRouting";
+// import {
+//   AppContent,
+//   AppSidebar,
+//   AppFooter,
+//   AppHeader,
+// } from "./components/index";
 const AdminLayout = () => {
   return (
     <div>
@@ -12,7 +17,7 @@ const AdminLayout = () => {
       <div className="wrapper d-flex flex-column min-vh-100 bg-light">
         <AppHeader />
         <div className="body flex-grow-1 px-3">
-          <AppContent />
+          <AdminRouting />
         </div>
         <AppFooter />
       </div>
