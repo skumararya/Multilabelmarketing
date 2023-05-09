@@ -1,67 +1,60 @@
 import React, { useEffect } from "react";
-import { addemployee } from "../../../../redux/slice/adminSlice/userSlice";
-import { useDispatch, useSelector } from "react-redux";
+import { useLocation, useNavigate } from "react-router-dom";
 import { Formik } from "formik"; 
-import * as Yup from "yup";
 import  {fetchstates , fetchcities}  from "../../../../redux/slice/OtherSlice";
-import { useLocation } from "react-router-dom";
-const Employee = () => {
-   
-//       const location = useLocation();
+import { useDispatch, useSelector } from "react-redux";
+import { addemployee } from "../../../../redux/slice/adminSlice/userSlice";
+import * as Yup from "yup";
 
-//   const data = location.state.item;
-//   console.log(data);
+const EditEmployee = () => {
+
+          const location = useLocation();
+          const data = location.state.item;
+
+const navigate = useNavigate();
     const dispatch = useDispatch();
-   
-
-const initialValues= {
-    fullName: "",
-    email: "",
-    mobile:"",
-    gender:"",
-    cityId:"",
-    stateId:"",
-    address:"",
-    pinCode:"",
-
-};
-
-const SignupSchema = Yup.object({
-
-   
-    email : Yup.string().required("Required"),
-    fullName : Yup.string().required("Required"),
-
-});
-
-const handleSubmit = (values) => {
-   // console.log(values);
-//    if (values.id != '') {
-//     dispatch(addemployee({url:"ManageEmployee/AddEmployee" + values.id, empmodal:values}))
-//       }
-
-    dispatch(addemployee({url:"ManageEmployee/AddEmployee", empmodal:values}))
-    alert("Registered Successfully");
-
-}
-
-const { statelist , citilist} = useSelector(
-    (state) => state.OtherSlice
-  );
-
-   
-useEffect(()=>{
-    dispatch(fetchstates("ManageMaster/GetAllState"));
-    dispatch(fetchcities("Managemaster/1"))
-},[dispatch]);
-
-//console.log(citilist.districtList)
+    const initialValues= {
+        fullName: "",
+        email: "",
+        mobile:"",
+        gender:"",
+        cityId:"",
+        stateId:"",
+        address:"",
+        pinCode:"",
+    
+    };
+    
+    const SignupSchema = Yup.object({
+    
+       
+        email : Yup.string().required("Required"),
+        fullName : Yup.string().required("Required"),
+    
+    });
+    
+    const handleSubmit = (values) => {
+ 
+       if (values.id != '') {
+        dispatch(addemployee({url:"ManageEmployee/AddEmployee", empmodal:values}))
+        alert("Registered Edit Successfully");
+        navigate("/admin/employies");
+    }
+    }
+    
+    const { statelist , citilist} = useSelector(
+        (state) => state.OtherSlice
+      );
+      useEffect(()=>{
+        dispatch(fetchstates("ManageMaster/GetAllState"));
+        //dispatch(fetchcities("Managemaster/1"))
+    },[dispatch]);
 
   return (
     <div className="container">
         <div className="emp-form-wraper">
             <Formik 
-             initialValues={initialValues}
+             initialValues={data}
            validationSchema={SignupSchema}
         onSubmit={handleSubmit}
         >
@@ -214,6 +207,7 @@ useEffect(()=>{
 
             <div className="col-12 col-md-12 text-center my-5">
                 <div className="form-group">
+                  <button type="button" className="btn btn-secondary mr-2" onClick={()=>navigate(`/admin/employies`)} >Cancel</button>
                     <button type="submit" className="btn btn-primary" value={"Submit"} >Submit</button>
                 </div>
             </div>
@@ -227,4 +221,4 @@ useEffect(()=>{
   )
 }
 
-export default Employee
+export default EditEmployee

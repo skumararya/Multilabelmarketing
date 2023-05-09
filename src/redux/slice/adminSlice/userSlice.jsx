@@ -29,7 +29,7 @@ export const addemployee = createAsyncThunk(
     try {
       return await servicesemployee.addemployeelist(url, empmodal).then(res => {
         if (res.Status === "Success") {
-          alert("Registered Successfully");
+         // alert("Registered Successfully");
         }
     }); 
     } catch (error) {
@@ -38,6 +38,21 @@ export const addemployee = createAsyncThunk(
   }
 );
 
+// Delete Employee
+export const deletemployee = createAsyncThunk( 
+  "userSlice/deletemployee",
+  async (url, thunkAPI) => {
+    try {
+      return await servicesemployee.deletemployeelist(url).then(res => {
+        if (res.Status === "Success") {
+          alert("Employee Delete Successfully");
+        }
+    }); 
+    } catch (error) {
+      return thunkAPI.rejectWithValue(extractErrorMessage(alert(error)));
+    }
+  }
+);
 
 
 
@@ -74,7 +89,7 @@ export const userSlice = createSlice({
     })
     .addCase(addemployee.rejected, (state, action) => {
       state.loading = false;
-      state.error = action.payload;
+      state.error = action.payload; 
     });
   },
 });
